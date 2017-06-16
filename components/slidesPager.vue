@@ -1,5 +1,5 @@
  <template>
-  <div class="counter">
+  <div class="pager">
     {{ $store.state.activeSlideIndex +1 }} / {{ presentation.slides.length }}
   </div>
 </template>
@@ -16,10 +16,5 @@ export default {
 </script>
 
 <style scoped>
-.counter {
-  padding-top: 5vh;
-  color:white;
-  text-align: center;
-  font-size:5vh;
-}
+
 </style>

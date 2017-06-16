@@ -20,7 +20,6 @@ body {
   background: white;
   border-radius:10px;
   border: solid gray 1px;
-  box-shadow: 10px;
   height: 75vh;
   width: 80vw;
   overflow: hidden;
@@ -32,24 +31,34 @@ body {
 }
 
 .slide__title--1 {
-  font-size: 70px;
+  font-size: 10vh;
   padding-bottom: 2vh;
 }
 
 .slide__title--2 {
-  font-size: 50px
+  font-size: 8vh
 }
 
 .slide__title--3 {
-  font-size: 40px
+  font-size: 5vh
 }
 
 .slide__content {
-  font-size:50px
+  font-size:5vh
 }
 
 .nuxt-link-exact-active {
     font-weight:bold
+}
+
+.pager {
+  position: absolute;
+  right:10vw;
+  top:10vh;
+  font-weight: bold;
+  color:#333;
+  text-align: center;
+  font-size:5vh;
 }
 
 /* Enter and leave animations can use different */
