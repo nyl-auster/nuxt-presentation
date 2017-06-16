@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+    background:#333;
+    background:#2096BA;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+}
+
+.slide {
+  padding: 5vh 5vw;
+  background: white;
+  border-radius:10px;
+  border: solid gray 1px;
+  box-shadow: 10px;
+  height: 70vh;
+  width: 80vw;
+  overflow: hidden;
+  text-align: center
+}
+
+.slide img {
+  max-width: 100%;
+}
+
+.slide__title--1 {
+  font-size: 70px;
+  padding-bottom: 2vh;
+}
+
+.slide__title--2 {
+  font-size: 50px
+}
+
+.slide__title--3 {
+  font-size: 40px
+}
+
+.slide__content {
+  font-size:50px
+}
+
+.nuxt-link-exact-active {
+    font-weight:bold
+}
+
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+/*
+.page-enter-active, .page-leave-active {
+  transition: opacity .15s
+}
+.page-enter, .page-leave-active {
+  opacity: 0
+}
+*/
