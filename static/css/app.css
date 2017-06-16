@@ -15,12 +15,13 @@ body {
 }
 
 .slide {
+  margin-top: 5vh;
   padding: 5vh 5vw;
   background: white;
   border-radius:10px;
   border: solid gray 1px;
   box-shadow: 10px;
-  height: 70vh;
+  height: 75vh;
   width: 80vw;
   overflow: hidden;
   text-align: center

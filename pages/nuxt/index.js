@@ -1,4 +1,5 @@
 const dir = '/nuxt'
+
 module.exports = {
   slides: [
     {
