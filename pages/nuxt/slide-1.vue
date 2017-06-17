@@ -1,10 +1,14 @@
 <template>
-    <div class="slide">
-        <h1 class="slide__title--1">SLIDE 1</h1>
-        <div class="slide__content">
-            I am the first slide
-            <img src="~assets/images/tiger.jpg" />
-        </div>
-    </div>
+  <div class="slide">
+    <h1>GETTING STARTED</h1>
+    <p>
+      <pre>
+        vue init nuxt/starter {project-name}
+        cd {project-name}
+        yarn install
+        yarn dev
+      </pre>
+    </p>
+  </div>
 </template>
 

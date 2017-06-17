@@ -1,10 +1,8 @@
 <template>
   <div class="slide">
-    <h1 class="slide__title--1">NUXT.JS</h1>
-    <h2 class="slide__title--2"> UNIVERSAL VUE APPLICATION </h2>
-    <div class="slide__content">
+    <h1>NUXT.JS</h1>
+    <h2> UNIVERSAL VUE APPLICATION </h2>
       <logo />
-    </div>
   </div>
 </template>
 

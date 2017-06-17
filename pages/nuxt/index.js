@@ -1,6 +1,10 @@
+/**
+ * Les slides de la présentation
+ */
 const uri = '/nuxt'
 module.exports = {
   uri,
+  icon: '/images/icon-nuxt.png',
   title: 'Introduction à Nuxt.js',
   slides: [
     {

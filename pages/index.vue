@@ -1,12 +1,12 @@
 <template>
   <div class="index">
     <h1>
-      CREATE SLIDES WITH NUXT.JS
+      PRESENTATIONS
     </h1>
-    <br /><br />
     <ul>
       <li @click="setActivePresentation(index)" v-for="(presentation, index) in presentations">
-        {{presentation.title}}
+        <img class="icon" :src="presentation.icon" />
+        <h2>{{presentation.title}}</h2>
       </li>
     </ul>
   </div>
@@ -15,7 +15,6 @@
 
 <script>
 const presentations = require('.')
-
 export default {
   layout: 'homepage',
   data () {
@@ -33,13 +32,31 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  padding-bottom: 5vh;
+  border-bottom: solid silver 1px;
+}
+
+h2 {
+  font-size: 5vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
 li {
   font-size: 5vh;
-  padding:2vh 2vw;
+  padding: 5vh 2vw;
+  border-bottom: solid silver 1px;
+}
+
+.icon {
+  max-height:10vh;
 }
 
 li:hover {
   cursor: pointer;
-  color:orange;
+  background: rgb(240,240,240); 
 }
 </style>
