@@ -3,7 +3,7 @@
     <h1>
       CREATE SLIDES WITH NUXT.JS
     </h1>
-    {{ $store.state.activePresentationIndex  }}
+    <br /><br />
     <ul>
       <li @click="setActivePresentation(index)" v-for="(presentation, index) in presentations">
         {{presentation.title}}
@@ -31,3 +31,15 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+li {
+  font-size: 5vh;
+  padding:2vh 2vw;
+}
+
+li:hover {
+  cursor: pointer;
+  color:orange;
+}
+</style>
