@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import presentation from '../pages/nuxt'
+
 import slidesPager from '~/components/slidesPager'
 
 export default {
@@ -14,6 +14,10 @@ export default {
     slidesPager
   },
   data () {
+    const presentationIndex = this.$store.state.activePresentationIndex
+    const presentations = require('~/pages')
+    const presentation = presentations[presentationIndex]
+    console.log(presentation)
     return {
       presentation
     }
@@ -32,22 +36,22 @@ export default {
   },
   methods: {
     setActiveSlide (index) {
-      this.$store.commit('setActiveSlide', index)
+      this.$store.commit('setActiveSlideIndex', index)
     },
     goTo (index) {
-      console.log('going to ' + index)
+      console.log('going to slide ' + index)
       this.setActiveSlide(index)
-      const slide = presentation.slides[index]
+      const slide = this.presentation.slides[index]
       this.$router.push(slide.uri)
     },
     goToNext () {
       let currentIndex = this.$store.state.activeSlideIndex
-      let newIndex = currentIndex < presentation.slides.length - 1 ? currentIndex + 1 : 0
+      let newIndex = currentIndex < this.presentation.slides.length - 1 ? currentIndex + 1 : 0
       this.goTo(newIndex)
     },
     goToPrevious () {
       let currentIndex = this.$store.state.activeSlideIndex
-      let newIndex = currentIndex > 0 ? currentIndex - 1 : presentation.slides.length - 1
+      let newIndex = currentIndex > 0 ? currentIndex - 1 : this.presentation.slides.length - 1
       this.goTo(newIndex)
     }
   }

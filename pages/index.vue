@@ -1,21 +1,33 @@
 <template>
-  <section class="container">
-    <div>
-      <h1>
-        NUXT SLIDER
-      </h1>
-    </div>
+  <div class="index">
+    <h1>
+      CREATE SLIDES WITH NUXT.JS
+    </h1>
+    {{ $store.state.activePresentationIndex  }}
+    <ul>
+      <li @click="setActivePresentation(index)" v-for="(presentation, index) in presentations">
+        {{presentation.title}}
+      </li>
+    </ul>
+  </div>
   </section>
 </template>
 
-<style scoped>
+<script>
+const presentations = require('.')
 
-body {
-  background: white;
-  text-align:center;
+export default {
+  layout: 'homepage',
+  data () {
+    return {
+      presentations
+    }
+  },
+  methods: {
+    setActivePresentation (index) {
+      this.$store.commit('setActivePresentationIndex', index)
+      this.$router.push(presentations[index]['uri'])
+    }
+  }
 }
-
-h1 {
-  font-size:50px
-}
-</style>
+</script>

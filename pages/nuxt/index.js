@@ -1,22 +1,23 @@
-const dir = '/nuxt'
-
+const uri = '/nuxt'
 module.exports = {
+  uri,
+  title: 'Introduction à Nuxt.js',
   slides: [
     {
-      uri: dir + '/slide-0',
-      title: 'Nuxt.js'
+      title: 'Nuxt.js',
+      uri: uri + '/'
     },
     {
-      uri: dir + '/slide-1',
-      title: 'Ma slide'
+      title: 'Ma slide',
+      uri: uri + '/slide-1'
     },
     {
-      uri: dir + '/slide-2',
-      title: 'Ma deuxième slide'
+      title: 'Ma deuxième slide',
+      uri: uri + '/slide-2'
     },
     {
-      uri: dir + '/slide-3',
-      title: 'mon troisième slide'
+      title: 'mon troisième slide',
+      uri: uri + '/slide-3'
     }
   ]
 }
