@@ -2,6 +2,7 @@
  * Les slides de la présentation
  */
 const uri = '/drupal-7-dev'
+
 module.exports = {
   uri,
   icon: '/images/icon-d8.png',

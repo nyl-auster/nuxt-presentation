@@ -1,23 +1,20 @@
 <template>
-  <div class="container">
-    <presentationPager :presentation="presentation" />
-    <nuxt/>
-  </div>
+   <slidesPager :presentation="presentation" />
 </template>
 
 <script>
 
-import presentationPager from '~/components/presentationPager'
+import slidesPager from '~/components/slidesPager'
 
 export default {
   components: {
-    presentationPager
+    slidesPager
   },
   data () {
     const presentationIndex = this.$store.state.activePresentationIndex
-    // our presentation list lives as index.js
-    const presentations = require('~/presentations')
+    const presentations = require('~/pages')
     const presentation = presentations[presentationIndex]
+    console.log(presentation)
     return {
       presentation
     }

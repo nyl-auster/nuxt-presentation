@@ -1,7 +1,7 @@
 /**
  * Les slides de la présentation
  */
-const uri = '/nuxt'
+const uri = '/nuxt-introduction'
 module.exports = {
   uri,
   icon: '/images/icon-nuxt.png',

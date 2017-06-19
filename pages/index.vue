@@ -14,9 +14,9 @@
 </template>
 
 <script>
-const presentations = require('.')
+const presentations = require('../presentations')
 export default {
-  layout: 'homepage',
+  layout: 'presentationsList',
   data () {
     return {
       presentations
