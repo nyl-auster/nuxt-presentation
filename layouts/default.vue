@@ -1,45 +1,46 @@
 <template>
   <div class="container">
-    <presentationPager :presentation="presentation" />
+    <div id="presentation-topbar">
+      <presentationBackToHome />
+      <presentationPager :presentation="presentation" />
+    </div>
     <nuxt/>
   </div>
 </template>
 
 <script>
-
 import presentationPager from '~/components/presentationPager'
+import presentationBackToHome from '~/components/presentationBackToHome'
+import presentationService from '../services/presentationService'
 
 export default {
   components: {
-    presentationPager
+    presentationPager,
+    presentationBackToHome
   },
   data () {
-    const presentationIndex = this.$store.state.activePresentationIndex
-    // our presentation list lives as index.js
-    const presentations = require('~/presentations')
-    const presentation = presentations[presentationIndex]
     return {
-      presentation
+      presentation: presentationService.findOne(this.$store.state.activePresentationIndex)
     }
   },
   created () {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowRight') {
-          this.goToNext()
-        }
-        if (event.key === 'ArrowLeft') {
-          this.goToPrevious()
-        }
-      })
+    if (typeof window === 'undefined') {
+      return
     }
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') {
+        this.goToNext()
+      }
+      if (event.key === 'ArrowLeft') {
+        this.goToPrevious()
+      }
+    })
   },
   methods: {
     setActiveSlide (index) {
       this.$store.commit('setActiveSlideIndex', index)
     },
     goTo (index) {
-      console.log('going to slide ' + index)
       this.setActiveSlide(index)
       const slide = this.presentation.slides[index]
       this.$router.push(slide.uri)

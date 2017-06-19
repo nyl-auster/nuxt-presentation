@@ -58,14 +58,23 @@ body {
     font-weight:bold
 }
 
-.pager {
-  position: absolute;
-  right:8vw;
-  top:8vh;
+#presentation-topbar {
+  position:relative;
+  padding-top:2vh;
+  height:3vh;
+}
+
+#presentation-topbar .pager {
+  float: right;
   font-weight: bold;
-  color:#333;
+  color:white;
   text-align: center;
   font-size:4vh;
+}
+
+#presentation-topbar a#back-to-home {
+  float: left;
+  color: white !important;
 }
 
 /* Enter and leave animations can use different */

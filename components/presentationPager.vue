@@ -1,6 +1,6 @@
  <template>
   <div class="pager">
-    {{ $store.state.activeSlideIndex +1 }} / {{ presentation.slides.length }}
+    {{ $store.state.activeSlideIndex + 1 }} / {{ presentation.slides.length }}
   </div>
 </template>
 
@@ -14,7 +14,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
