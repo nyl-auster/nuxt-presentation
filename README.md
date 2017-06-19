@@ -1,22 +1,18 @@
-# formation-drupal-7-dev
+# presentation slides with Nuxt.js
 
-> Slides
+Nuxt pages components are used as slides. *presentations* directory contains metadatas about our different presentations (slides, uri, order etc ...)
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-$ npm install # Or yarn install
+$ yarn install
+$ yarn dev
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build
+$ yarn start
 
 # generate static project
-$ npm run generate
+$ yarn generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+Ccheckout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
